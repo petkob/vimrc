@@ -21,6 +21,11 @@ cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == "h" ? "vert h" : "h"
 " Presentation
 " ##########################################################################
 set cursorline cursorlineopt=both
+augroup CursorLineOnlyInActiveWindow
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+augroup END
 set showbreak=… " when a line is too long and reflows
 set wrap linebreak " don't break words
 set textwidth=120
