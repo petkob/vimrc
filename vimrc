@@ -31,11 +31,17 @@ set wrap linebreak " don't break words
 set textwidth=120
 call matchadd('ColorColumn', '\%81v', 100) " paint column 81 if text goes there
 syntax enable " coloring
-set scrolloff=3 " number of screen lines to keep above and below the cursor
 exec "set listchars=tab:\u25B8\u25B8,multispace:\uB7,leadmultispace:\uA0,trail:\uB7,nbsp:~"
 set list " Show tabs, more than one space not in the beginning, and trailing spaces; see above
 nmap <leader>l :set list!<CR> " toggle showing invisible spaces
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember file position
+
+" ##########################################################################
+" Scrolling
+" ##########################################################################
+set scrolloff=3 " number of screen lines to keep above and below the cursor
+nmap <C-Up>   gkzz
+nmap <C-Down> gjzz
 
 " ##########################################################################
 " Editing
