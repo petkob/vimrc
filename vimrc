@@ -109,6 +109,7 @@ nnoremap S :%s//g<left><left>
 " ##########################################################################
 " Files: w[rite], sav[eas], wa[ll]
 " ##########################################################################
+set fileformats=unix,dos " use unix, but leave dos format files as they are
 set autoread " when file is changed from outside
 set path=.,** wildmenu
 set wildmode=list:longest wildignore=*.gif,*.gz,*.img,*.jpg,*.lib,*.mp4,*.o,*.pdf,*.png,*.pyc,*.zip
