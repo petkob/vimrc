@@ -37,7 +37,7 @@ nmap <leader>l :set list!<CR> " toggle showing invisible spaces
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember file position
 
 " ##########################################################################
-" Scrolling
+" Moving and scrolling: h, j, k, l; ^D, ^U; ^F, ^B; ^E, ^Y; z-, z+, z.
 " ##########################################################################
 set scrolloff=3 " number of screen lines to keep above and below the cursor
 nmap <C-Up>   gkzz
